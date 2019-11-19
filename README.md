@@ -1,10 +1,30 @@
-# visualize_dependency_tree
-Visualize dependency trees for Stanford CoreNLP outputs with Spacy
+# Convert Stanford CoreNLP's Dependency Tree to Spacy's for Visualization
+This module provides a format converter from Stanford CoreNLP's dependency trees to Spacy's such that the visualation can be done using Spacy's visualizer.
 
 # Motivation
-I just found that Spacy has an amazing visualizer that we should explore more and this project bridges the gap between the CoreNLP parsing output and it.
+I just found that Spacy has an amazing visualizer that we should explore more and this project bridges the gap between the CoreNLP parsing outputs and it.
+
+# Pre-requisite
+Install Spacy and stanfordnlp. The versions we have tested are Spacy 2.2.2 and stanfordnlp 0.2.0
+```
+pip install spacy stanfordnlp
+```
+
+Download Stanford CoreNLP (tested on 3.9.2) Java library: https://stanfordnlp.github.io/CoreNLP/
+
+Set the env variable for stanfordnlp:
+```
+export CORENLP_HOME=/yourhome/stanford-corenlp-full-2018-10-05
+```
+
+# Installation
+```
+pip install corenlp-vdep
+```
+
 
 # Examples
+
 ```python
 import spacy
 from spacy import displacy
