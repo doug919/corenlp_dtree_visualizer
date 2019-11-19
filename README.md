@@ -37,5 +37,4 @@ displacy.render(tree, style="dep", manual=True)
 ```
 
 
-![Alt text](./example.svg)
-<img src="./example.svg">
+![svg](./example.svg)
