@@ -4,7 +4,7 @@ Visualize dependency trees for Stanford CoreNLP outputs with Spacy
 # Motivation
 I just found that Spacy has an amazing visualizer and this project bridges the gap between the CoreNLP parsing output and it.
 
-'''python
+```python
 import spacy
 from spacy import displacy
 from stanfordnlp.server import CoreNLPClient
@@ -33,4 +33,4 @@ displacy.render(tree, style="dep", manual=True)
 # svg = displacy.render(tree, style="dep", manual=True)
 # with open('tmp.svg', 'w', encoding='utf-8') as fw:
     # fw.write(svg)
-'''
+```
