@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-        name="corenlp-vdep-doug919", # Replace with your own username
+        name="corenlp-vdep", # Replace with your own username
         version="0.1.0",
         author="doug919",
         author_email="doug919@gmail.com",
