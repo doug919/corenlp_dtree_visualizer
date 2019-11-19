@@ -35,3 +35,7 @@ displacy.render(tree, style="dep", manual=True)
 # with open('tmp.svg', 'w', encoding='utf-8') as fw:
     # fw.write(svg)
 ```
+
+
+![Alt text](./example.svg)
+<img src="./example.svg">
