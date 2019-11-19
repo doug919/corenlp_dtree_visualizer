@@ -1,6 +1,8 @@
-
 import spacy
 from spacy import displacy
+from stanfordnlp.server import CoreNLPClient
+
+from corenlp_dep_visualizer.converters import _corenlp_dep_tree_to_spacy_dep_tree
 
 
 # Input text
@@ -12,10 +14,15 @@ with CoreNLPClient(annotators=['tokenize','ssplit','pos','lemma','ner','parse','
     # submit the request to the server
     ann = client.annotate(text)
 
-
 # Convert dependency tree formats
+sent = ann['sentences'][0]
 tree = _corenlp_dep_tree_to_spacy_dep_tree(sent['tokens'], sent['enhancedPlusPlusDependencies'])
 
 # Visualize with Spacy
 nlp = spacy.load("en_core_web_sm")
-displacy.serve(tree, style="dep", manual=True)
+displacy.render(tree, style="dep", manual=True)
+
+# could also save to a file
+# svg = displacy.render(tree, style="dep", manual=True)
+# with open('tmp.svg', 'w', encoding='utf-8') as fw:
+    # fw.write(svg)
