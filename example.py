@@ -2,7 +2,7 @@ import spacy
 from spacy import displacy
 from stanfordnlp.server import CoreNLPClient
 
-from corenlp_dep_visualizer.converters import _corenlp_dep_tree_to_spacy_dep_tree
+from corenlp_dtree_visualizer.converters import _corenlp_dep_tree_to_spacy_dep_tree
 
 
 # Input text
